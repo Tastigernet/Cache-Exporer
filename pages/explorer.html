@@ -384,7 +384,7 @@
     // updateText('blockSolveTime', getReadableTime(lastStats.difficulty / avgHashRate)); Add back after timestamp is added to mempool
   }
 
-  //  Turtle MemPool Transactions
+  //  Cache MemPool Transactions
   function getPoolTransactions() {
     var xhrGetPool = $.ajax({
       url: api + '/json_rpc',
@@ -435,7 +435,7 @@
 
   // Difficulty chart
   function displayDiffChart() {
-    var ctx = document.getElementById("difficultyChart");
+    var cxche = document.getElementById("difficultyChart");
     var chartData = {
       //labels: [].concat(Blocks).reverse(),
       labels: [].concat(formatDate(Timestamps)).reverse(),
@@ -649,7 +649,7 @@
     };
 
 		/*
-        diffChart = new Chart(ctx, {
+        diffChart = new Chart(cxche, {
             type: 'line',
             data: chartData,
             options: options
