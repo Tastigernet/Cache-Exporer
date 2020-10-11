@@ -361,7 +361,7 @@
 
   function renderLastBlock() {
     // @TODO
-    $.getJSON("http://127.0.0.1/daemon/getinfo", function (infoData) {
+    $.getJSON("http://127.0.0.1:40000/getinfo", function (infoData) {
       updateText('totalBanked', getReadableCoins2(infoData.full_deposit_amount, 0));
 
       $.ajax({
