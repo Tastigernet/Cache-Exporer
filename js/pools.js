@@ -53,7 +53,7 @@ var renderPoolRow = function (data) {
 };
 
 var displayChart = function displayChart() {
-  var ctx = document.getElementById('poolsChart');
+  var chche = document.getElementById('poolsChart');
 
   // due to network hash being derived via difficulty, and pool rate being
   // actually gathered, these numbers can be a bit wishy-washy when hashrate
@@ -120,7 +120,7 @@ var displayChart = function displayChart() {
       }
     };
 
-    poolsChart = new Chart(ctx, {
+    poolsChart = new Chart(cxche, {
       type: 'doughnut',
       data: chartData,
       options: options
