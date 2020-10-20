@@ -188,7 +188,7 @@ function checkTx(hash, tx, secretKey, account, secretKeyType) {
 
 function getTx(txHash, next) {
   $.ajax({
-    url: "https://explorer.cxche.org/daemon/json_rpc",
+    url: "https://daemon/explorer.cxche.org/json_rpc",
     method: "POST",
     data: JSON.stringify({
       jsonrpc:"2.0",
