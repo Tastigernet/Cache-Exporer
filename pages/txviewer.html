@@ -174,7 +174,7 @@ function checkTx(hash, tx, secretKey, account, secretKeyType) {
       var spk = acctHex.slice(t, m) // send pk
       for (i = 0; i < tx.vout.length; i++) {
         var pubkey = derive_public_key(der, i, spk)
-        var amount = tx.vout[i].amount / 1000000
+        var amount = tx.vout[i].amount / 100000 /* coinunits */
         if (pubkey === tx.vout[i].target.data.key) {
           results.total_owned += amount
           results.owned.push([i, pubkey, amount])
@@ -188,7 +188,7 @@ function checkTx(hash, tx, secretKey, account, secretKeyType) {
 
 function getTx(txHash, next) {
   $.ajax({
-    url: "https://daemon/explorer.cxche.org/json_rpc",
+    url: "https://daemon.explorer.cxche.org/json_rpc",
     method: "POST",
     data: JSON.stringify({
       jsonrpc:"2.0",

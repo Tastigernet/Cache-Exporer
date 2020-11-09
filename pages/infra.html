@@ -103,7 +103,7 @@
             var rowData = [];
 
             if (obj.name) {
-              rowData.push(obj.location ? (obj.location.ip + ":" + (obj.nodePort || "16000")) : (obj.ip.substring(7) + ":" + (obj.nodePort || "16000")));
+              rowData.push(obj.location ? (obj.location.ip + ":" + (obj.nodePort || "40000")) : (obj.ip.substring(7) + ":" + (obj.nodePort || "40000")));
               rowData.push(obj.name);
               if ((obj.location) && (obj.location.data)) {
                 rowData.push(getCountryName(obj.location.data.country));
