@@ -48,7 +48,7 @@ function checkTxn(transactionResponse, privateKey, address, privateKeyType) {
             var spk = addrHex.slice(t,m);
             for (let i = 0; i < txn.vout.length; i++) {
                 var pubkey = cnUtil.derive_public_key(der, i, spk);
-                var amount = txn.vout[i].amount / 1000000;
+                var amount = txn.vout[i].amount / 100000;
                 if (pubkey === txn.vout[i].target.data.key) {
                     results.total_owned += amount;
                     results.owned.push([i, pubkey, amount]);

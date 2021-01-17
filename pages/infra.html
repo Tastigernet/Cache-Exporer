@@ -89,8 +89,8 @@
   }
 
   function loadNodesDataToTable(initialLoad) {
-    //$.getJSON("https://api.github.com/repos/cache-core/cache/releases/latest", function (release) {
-      // todo
+    $.getJSON("https://api.github.com/repos/cache-core/cache/releases/latest", function (release) {
+      
       $.getJSON("", function (data) {
         var correctHeightList = {};
         var correctHeightCnt = 0;
@@ -103,7 +103,7 @@
             var rowData = [];
 
             if (obj.name) {
-              rowData.push(obj.location ? (obj.location.ip + ":" + (obj.nodePort || "40000")) : (obj.ip.substring(7) + ":" + (obj.nodePort || "40000")));
+              rowData.push(obj.location ? (obj.location.ip + ":" + (obj.nodePort || "38999")) : (obj.ip.substring(7) + ":" + (obj.nodePort || "38999")));
               rowData.push(obj.name);
               if ((obj.location) && (obj.location.data)) {
                 rowData.push(getCountryName(obj.location.data.country));
