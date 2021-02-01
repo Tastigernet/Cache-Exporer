@@ -361,7 +361,8 @@
 
   function renderLastBlock() {
 
-    $.getJSON("https://daemon.explorer.cxche.org/getinfo", function (infoData) {
+//    $.getJSON("https://explorer.cxche.org/daemon/getinfo", function (infoData) {
+      $.getJSON(api + '/getinfo', function (infoData) {
       updateText('totalBanked', getReadableCoins2(infoData.full_deposit_amount, 0));
 
       $.ajax({

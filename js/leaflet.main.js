@@ -1,4 +1,4 @@
-var CCX_GlobalNodeMap = (function () {
+var CXCHE_GlobalNodeMap = (function () {
   var markerClusters = null;
   var myIcon = null;
   var mbAttr = null;
@@ -74,7 +74,7 @@ var CCX_GlobalNodeMap = (function () {
     }
 
     // @TODO
-    $.getJSON("https://explorer.conceal.network/services/nodes/geodata", function (data) {
+    $.getJSON("https://explorer.cxche.org/services/nodes/geodata", function (data) {
       $("#nodesNumber").html("(" + data.length + " online)");
 
       if (markerClusters) {

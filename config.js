@@ -1,5 +1,5 @@
-var api = 'https://daemon.explorer.cxche.org';
-var poolListUrl = 'https://services.explorer.cxche.org/pools/list';
+var api = 'https://explorer.cxche.org/daemon';
+var poolListUrl = 'https://explorer.cxche.org/services/pools/data';
 var donationAddress = "";
 var blockTargetInterval = 120;
 var coinUnits = 100000;

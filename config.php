@@ -1,8 +1,8 @@
 <?php
 return array(
-        'api' => 'https://daemon.explorer.cxche.org',
-        'pool' => 'https://pool.explorer.cxche.org',
-        'services' => 'https://services.explorer.cxche.org',
+        'api' => 'https://explorer.cxche.org/daemon',
+        'pool' => 'https://explorer.cxche.org/pool',
+        'services' => 'https://explorer.cxche.org/services',
         'blockTargetInterval' => 120,
         'coinUnits' => 100000,
 );
