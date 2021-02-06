@@ -4,4 +4,4 @@ var donationAddress = "";
 var blockTargetInterval = 120;
 var coinUnits = 100000;
 var symbol = 'CXCHE';
-var refreshDelay = 5000;
+var refreshDelay = 60000;
